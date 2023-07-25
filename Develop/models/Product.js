@@ -10,10 +10,37 @@ class Product extends Model {}
 Product.init(
   {
     // define columns
-    product: {
+    product_name: {
       type: DataTypes.STRING
     },
+
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    price: { 
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+      isDecimal: true,
+    },
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 10,
+      isNumeric: true,
+    },
+    categoryId: {
+      type: DataTypes.INTEGER,
+      // References the category model's id
+      references: {
+        model: "category",
+        key: "id",
+      },
+    },
   },
+
   {
     // Link to database connection
     sequelize,
@@ -24,5 +51,6 @@ Product.init(
     modelName: 'product',
   }
 );
+// Export
 
 module.exports = Product;
