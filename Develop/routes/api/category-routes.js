@@ -41,7 +41,7 @@ router.post('/', async (req, res) => {
   try {
     const newCategory= await Category.create(req.body);
     res.status(201).json(newCategory);
-  } catch (error) {
+  } catch (err) {
     console.log(err);
     res.status(400).json(err);
   }
