@@ -14,7 +14,6 @@ router.get('/', async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
-    
   }
 });
 
@@ -68,7 +67,7 @@ try {
   })
   res.json(deletedCategory);
 } catch (error) {
-  res.json(err)
+  res.json(error)
 }
 
   

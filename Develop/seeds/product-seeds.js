@@ -31,6 +31,15 @@ const productData = [
     stock: 22,
     category_id: 2,
   },
+  // ?????
+  
+  {
+    product_name: "Basketball",
+    price: 200.00,
+    stock: 3,
+    tagIds: [1, 2, 3, 4]
+  }
+  
 ];
 
 const seedProducts = () => Product.bulkCreate(productData);
