@@ -29,10 +29,11 @@ try {
   const product = await Product.findByPk(req.params.id, {
     include: [{model: Category}, {model: Tag}],
   });
-  if (!product) {
-    res.status(404).json({ message: 'No product found with this id' });
-    return;
-  }
+  res.status(200).json(product);
+  // if (!product) {
+  //   res.status(404).json({ message: 'No product found with this id' });
+  //   return;
+  // }
 } catch (error) {
   console.log(error);
     res.status(500).json(error)
