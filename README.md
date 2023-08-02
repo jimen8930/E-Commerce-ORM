@@ -28,7 +28,7 @@ Also, you will need to install more packges such as:
 To run the server, within the terminal, type the command npm start or node server.js.
 
 Once the server is running, users can then access the back end of the application within the browser to observe full functionality of the site. Here is the link for the tutorial:
-https://drive.google.com/file/d/16_sscnqNMe42ZtOZ3ioy4P8L5wEra9L0/view
+https://drive.google.com/file/d/1h1DEr8Y1wbVwYMVZvzPbNuHTQXuPsWZw/view
 
 
 ## Usage
